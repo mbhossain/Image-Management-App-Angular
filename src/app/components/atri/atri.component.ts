@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { PetInterface } from 'src/app/pet-interface';
 
 @Component({
   selector: 'app-atri',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./atri.component.css']
 })
 export class AtriComponent implements OnInit {
+
+  @Input() pet: PetInterface
 
   constructor() { }
 

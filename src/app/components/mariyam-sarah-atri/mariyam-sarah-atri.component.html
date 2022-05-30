@@ -1,0 +1,7 @@
+<!-- <p *ngFor="let pet of pets">{{pet.breed}}</p> -->
+
+<mat-grid-list cols="3" rowHeight="500px">
+    <mat-grid-tile *ngFor="let pet of pets">
+        <app-atri [pet]="pet"></app-atri>
+    </mat-grid-tile>
+</mat-grid-list>
