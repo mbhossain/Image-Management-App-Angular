@@ -7,11 +7,11 @@
     <img class="image-size" mat-card-image src="{{pet.url}}" alt="Photo of a Dog">
     <mat-card-content>
         <p>
-           {{pet.description}}
+            {{pet.description}}
         </p>
     </mat-card-content>
     <mat-card-actions>
-        <button mat-icon-button color="warn" aria-label="favorite button" (click)="onClick()">
+        <button mat-icon-button [color]="pet.favorite? 'warn':''" aria-label="favorite button" (click)="onClick()">
             <mat-icon>favorite</mat-icon>
         </button>
         <button mat-button>SHARE</button>
