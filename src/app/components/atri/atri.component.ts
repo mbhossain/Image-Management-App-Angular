@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { PetInterface } from 'src/app/pet-interface';
 
 @Component({
@@ -9,14 +9,15 @@ import { PetInterface } from 'src/app/pet-interface';
 export class AtriComponent implements OnInit {
 
   @Input() pet: PetInterface
+  @Output() onAddFavorite: EventEmitter<PetInterface> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onClick() {
-    console.log('Favorite')
+  onFavorite() {
+    this.onAddFavorite.emit();
   }
 
 }

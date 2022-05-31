@@ -18,4 +18,8 @@ export class MariyamSarahAtriComponent implements OnInit {
     this.petService.getJSONData().subscribe(pets => this.pets = pets)
   }
 
+  addFavoritePet(pet: PetInterface) {
+    pet.favorite = !pet.favorite;
+  }
+
 }
