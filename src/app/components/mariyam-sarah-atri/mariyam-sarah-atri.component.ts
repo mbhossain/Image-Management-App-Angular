@@ -20,6 +20,7 @@ export class MariyamSarahAtriComponent implements OnInit {
 
   addFavoritePet(pet: PetInterface) {
     pet.favorite = !pet.favorite;
+    this.petService.updatePetFavorite(pet).subscribe();
   }
 
 }

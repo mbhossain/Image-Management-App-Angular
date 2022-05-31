@@ -1,8 +1,14 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { JSONData } from '../json';
 import { PetInterface } from '../pet-interface';
+
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json'
+  })
+}
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +24,11 @@ export class PetService {
     // return pets
 
     return this.http.get<PetInterface[]>(this.url);
+  }
+
+  updatePetFavorite(pet: PetInterface): Observable<PetInterface> {
+    const updateUrl = `${this.url}/${pet.id}`;
+    return this.http.put<PetInterface>(updateUrl, pet, httpOptions);
   }
 
 }
