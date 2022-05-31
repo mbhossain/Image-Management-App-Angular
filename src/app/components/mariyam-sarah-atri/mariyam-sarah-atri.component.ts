@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { JSONData } from 'src/app/json';
+// import { JSONData } from 'src/app/json';
 import { PetInterface } from 'src/app/pet-interface';
+import { PetService } from 'src/app/services/pet.service';
 
 @Component({
   selector: 'app-mariyam-sarah-atri',
@@ -9,11 +10,12 @@ import { PetInterface } from 'src/app/pet-interface';
 })
 export class MariyamSarahAtriComponent implements OnInit {
 
-  pets: PetInterface[]= JSONData
+  pets: PetInterface[] = [];
 
-  constructor() { }
+  constructor(private petService: PetService) { }
 
   ngOnInit(): void {
+    this.petService.getJSONData().subscribe(pets => this.pets = pets)
   }
 
 }
