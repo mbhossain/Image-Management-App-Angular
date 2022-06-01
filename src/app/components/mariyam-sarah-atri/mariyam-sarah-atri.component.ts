@@ -23,4 +23,9 @@ export class MariyamSarahAtriComponent implements OnInit {
     this.petService.updatePetFavorite(pet).subscribe();
   }
 
+  onDelete(pet: PetInterface) {
+    this.petService.deletePet(pet).subscribe(() => (this.pets = this.pets.filter(res => res.id !== pet.id)))
+
+  }
+
 }

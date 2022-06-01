@@ -10,6 +10,7 @@ export class AtriComponent implements OnInit {
 
   @Input() pet: PetInterface
   @Output() onAddFavorite: EventEmitter<PetInterface> = new EventEmitter();
+  @Output() onDeletePet: EventEmitter<PetInterface> = new EventEmitter();
 
   constructor() { }
 
@@ -18,6 +19,10 @@ export class AtriComponent implements OnInit {
 
   onFavorite() {
     this.onAddFavorite.emit();
+  }
+
+  onDelete(pet) {
+    this.onDeletePet.emit(pet);
   }
 
 }

@@ -14,6 +14,6 @@
         <button mat-icon-button [color]="pet.favorite? 'warn':''" aria-label="favorite button" (click)="onFavorite()">
             <mat-icon>favorite</mat-icon>
         </button>
-        <button mat-button>SHARE</button>
+        <button mat-button (click)="onDelete(pet)">Delete</button>
     </mat-card-actions>
 </mat-card>
