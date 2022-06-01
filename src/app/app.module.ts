@@ -11,12 +11,16 @@ import { MatIconModule } from '@angular/material/icon';
 import { MariyamSarahAtriComponent } from './components/mariyam-sarah-atri/mariyam-sarah-atri.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { HttpClientModule } from '@angular/common/http';
+import { AddPetComponent } from './components/add-pet/add-pet.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
     AppComponent,
     AtriComponent,
-    MariyamSarahAtriComponent
+    MariyamSarahAtriComponent,
+    AddPetComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +30,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatIconModule,
     MatGridListModule,
-    HttpClientModule
+    HttpClientModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
