@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'atri-quick-fix'`, () => {
+  it(`should have as title 'pet-quick-fix'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('atri-quick-fix');
+    expect(app.title).toEqual('pet-quick-fix');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('atri-quick-fix app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('pet-quick-fix app is running!');
   });
 });

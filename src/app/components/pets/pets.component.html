@@ -1,7 +1,7 @@
 <!-- <p *ngFor="let pet of pets">{{pet.breed}}</p> -->
-<app-add-pet></app-add-pet>
+<app-add-pet (onAddPet)="addPet($event)"></app-add-pet>
 <mat-grid-list cols="3" rowHeight="500px">
     <mat-grid-tile *ngFor="let pet of pets">
-        <app-atri [pet]="pet" (onAddFavorite)="addFavoritePet(pet)" (onDeletePet)="onDelete(pet)"></app-atri>
+        <app-pet [pet]="pet" (onAddFavorite)="addFavoritePet(pet)" (onDeletePet)="onDelete(pet)"></app-pet>
     </mat-grid-tile>
 </mat-grid-list>

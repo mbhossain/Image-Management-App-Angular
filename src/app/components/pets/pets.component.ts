@@ -4,11 +4,11 @@ import { PetInterface } from 'src/app/pet-interface';
 import { PetService } from 'src/app/services/pet.service';
 
 @Component({
-  selector: 'app-mariyam-sarah-atri',
-  templateUrl: './mariyam-sarah-atri.component.html',
-  styleUrls: ['./mariyam-sarah-atri.component.css']
+  selector: 'app-pets',
+  templateUrl: './pets.component.html',
+  styleUrls: ['./pets.component.css']
 })
-export class MariyamSarahAtriComponent implements OnInit {
+export class PetsComponent implements OnInit {
 
   pets: PetInterface[] = [];
 
@@ -26,6 +26,10 @@ export class MariyamSarahAtriComponent implements OnInit {
   onDelete(pet: PetInterface) {
     this.petService.deletePet(pet).subscribe(() => (this.pets = this.pets.filter(res => res.id !== pet.id)))
 
+  }
+
+  addPet(pet: PetInterface) {
+    this.petService.addPet(pet).subscribe(pet => this.pets.push(pet))
   }
 
 }

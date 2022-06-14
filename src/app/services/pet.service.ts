@@ -36,4 +36,8 @@ export class PetService {
     return this.http.delete<PetInterface>(deleteUrl);
   }
 
+  addPet(pet: PetInterface): Observable<PetInterface> {
+    return this.http.post<PetInterface>(this.url, pet, httpOptions);
+  }
+
 }

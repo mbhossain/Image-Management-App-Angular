@@ -3,24 +3,27 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AtriComponent } from './components/atri/atri.component';
+import { PetComponent } from './components/pet/pet.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { MariyamSarahAtriComponent } from './components/mariyam-sarah-atri/mariyam-sarah-atri.component';
+import { PetsComponent } from './components/pets/pets.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { HttpClientModule } from '@angular/common/http';
 import { AddPetComponent } from './components/add-pet/add-pet.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+import { AboutPageComponent } from './components/about-page/about-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AtriComponent,
-    MariyamSarahAtriComponent,
-    AddPetComponent
+    PetComponent,
+    PetsComponent,
+    AddPetComponent,
+    AboutPageComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,8 @@ import {MatInputModule} from '@angular/material/input';
     MatGridListModule,
     HttpClientModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
