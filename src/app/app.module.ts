@@ -16,6 +16,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { AboutPageComponent } from './components/about-page/about-page.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { AboutPageComponent } from './components/about-page/about-page.component
     PetComponent,
     PetsComponent,
     AddPetComponent,
-    AboutPageComponent
+    AboutPageComponent,
+    ForgotPasswordComponent,
+    NotFoundComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
