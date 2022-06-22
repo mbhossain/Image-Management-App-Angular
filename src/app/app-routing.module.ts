@@ -7,7 +7,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { PetsComponent } from './components/pets/pets.component';
 
 const routes: Routes = [
-  { path: '', component: PetsComponent },
+  { path: 'pet', component: PetsComponent },
   { path: 'about', component: AboutPageComponent },
   { path: 'login', component: LoginComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent },
