@@ -8,7 +8,7 @@ nav {
 }
 
 nav a {
-    font-size: 20px;
-    color: white;
     text-decoration: none;
+    font-size: 1.5rem;
+    color: #03A9F4;
 }
