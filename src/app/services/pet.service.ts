@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { JSONData } from '../json';
+import { Login } from '../models/login-interface';
 import { PetInterface } from '../pet-interface';
 
 const httpOptions = {
@@ -15,7 +16,8 @@ const httpOptions = {
 })
 export class PetService {
 
-  private url = "https://6296548c810c00c1cb73c3f0.mockapi.io/pets"
+  private url = "https://6296548c810c00c1cb73c3f0.mockapi.io/pets";
+  private loginUrl = "http://localhost:8800/api/hotels";
 
   constructor(private http: HttpClient) { }
 
@@ -38,6 +40,10 @@ export class PetService {
 
   addPet(pet: PetInterface): Observable<PetInterface> {
     return this.http.post<PetInterface>(this.url, pet, httpOptions);
+  }
+
+  login(): Observable<Login[]> {
+    return this.http.get<Login[]>(this.loginUrl);
   }
 
 }

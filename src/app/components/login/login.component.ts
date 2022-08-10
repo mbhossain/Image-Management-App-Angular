@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PetService } from 'src/app/services/pet.service';
 
 @Component({
   selector: 'app-login',
@@ -6,11 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  public title = 'Mohammad Belal';
+  public users = [];
 
-  constructor() { }
+  constructor(
+    private _petService: PetService
+  ) { }
 
   ngOnInit(): void {
+    this._petService.login().subscribe(data => {
+      this.users = data
+      console.log('this.users:', this.users)
+      debugger
+    });
   }
 
 }

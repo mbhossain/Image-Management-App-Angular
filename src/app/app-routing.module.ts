@@ -7,6 +7,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { PetsComponent } from './components/pets/pets.component';
 
 const routes: Routes = [
+  { path: 'user', loadChildren: () => import('src/app/modules/user/user.module').then(m => m.UserModule) },
+
   { path: 'pet', component: PetsComponent },
   { path: 'about', component: AboutPageComponent },
   { path: 'login', component: LoginComponent },
